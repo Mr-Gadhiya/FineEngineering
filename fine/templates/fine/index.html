@@ -1,0 +1,420 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>FINE Engneering Works</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="{% static 'fine/img/fine1.jpg' %}" rel="icon">
+  <link href="{% static 'fine/img/fine1.jpg' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,600,700,700i|Montserrat:300,400,500,600,700" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="{% static 'fine/lib/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="{% static 'fine/lib/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+  <link href="{% static 'fine/lib/animate/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'fine/lib/ionicons/css/ionicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'fine/lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+  <link href="{% static 'fine/lib/lightbox/css/lightbox.min.css' %}" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="{% static 'fine/css/style.css' %}" rel="stylesheet">
+  <script src="{% static 'fine/lib/animjs/anim.js' %}"></script>
+
+ 
+</head>
+
+<body>
+  <!--==========================
+  Header
+  ============================-->
+  <header id="header">
+
+    <div id="topbar">
+      <div class="container">
+        <div class="social-links">
+          <!-- <a href="https://twitter.com/JayGadhiya16" class="twitter"><i class="fa fa-twitter"></i></a> -->
+          <a href="https://www.facebook.com/jay.gadhiya.370" class="facebook"><i class="fa fa-facebook"></i></a>
+          <a href="https://wa.me/9712071723" class="whatsapp"><i class="fa fa-whatsapp"></i></a>
+          <a href="https://www.instagram.com/er.jay_gadhiya/" class="instagram"><i class="fa fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="logo float-left">
+        <!-- Uncomment below if you prefer to use an image logo -->
+          <h1 class="text-light"><a href="#intro" class="scrollto"><span>Fine Engineering</span></a></h1>
+       <!--<a href="#header" class="scrollto"><img src="img/logo.jpg" alt="" class="img-fluid"></a> -->
+      </div>
+
+      <nav class="main-nav float-right d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="#intro">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Products</a></li>
+          <li><a href="#team">OWNER</a></li>
+          <li><a href="#footer">Contact Us</a></li>
+        </ul>
+      </nav><!-- .main-nav -->
+      
+    </div>
+  </header><!-- #header -->
+
+  <!--==========================
+    Intro Section
+  ============================-->
+  <section id="intro" class="clearfix">
+    <div class="container d-flex h-100">
+      <div class="row justify-content-center align-self-center">
+        <div class="col-md-6 intro-info order-md-first order-last">
+          <h2 class="ml15">
+              <span class="word ani1">Leading</span><br>
+              <span class="word ani2">Manufacturar&nbsp;Of</span>
+              <span class="letters word ani3">Ceramic </span></br>
+              <span class="word ani4">Modules</span>
+            </h2>
+          <div class="amt1-btn">
+            <a href="#about" class="btn-get-started">Get Started</a>
+          </div>
+        </div>
+  
+        <div class="col-md-6 intro-img order-md-last order-first">
+        </div>
+      </div>
+
+    </div>
+  </section><!-- #intro -->
+
+  <main id="main">
+
+    <!--==========================
+      About Us Section
+    ============================-->
+    <section id="about" >
+
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-5 col-md-6">
+           <br/><br/> <div class="about-img">
+				<br/><br/><img src="{% static 'fine/img/ab2.jpg'%}" alt="">  <br/><br/><br>
+            </div>
+          </div>
+
+          <div class="col-lg-7 col-md-6">
+            <div class="about-content">
+              <h2>About Us</h2><br>
+              <h3>We are manufacture Ceramic Modules.</h3><br>
+              <p>We make ceramic module like drum pully, heavy drum pully, mine drum pully, conveyor ,Idler Stand  .</p><br>
+              <p></p>
+              <ul>
+                <li><i class="ion-android-checkmark-circle"></i> We use best quality raw material.</li><br>
+                <li><i class="ion-android-checkmark-circle"></i> We gives best quality products.</li><br>
+                <li><i class="ion-android-checkmark-circle"></i> We complete your order in time period.</li><br>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- #about -->
+
+
+    <!--==========================
+      Services Section
+    ============================-->
+    <section id="services" class="section-bg">
+      <div class="container">
+
+        <header class="section-header">
+          <h3>Products</h3>
+          <p>We make many product that used in Ceramic Industry.</p>
+        </header>
+
+        <div class="row">
+          {% for i in product %}
+          <div class="col-md-6 col-lg-6 wow bounceInUp" data-wow-duration="1.4s">
+            <div class="box">
+              <h4 class="title"><a href="">{{i.product_name}}</a></h4>
+              <p class="description"></p>
+			  <img src="/media/{{i.image}}" alt="" height="150px"> 	
+            </div>
+          </div>
+          {% endfor %}
+          <!-- <div class="col-md-6 col-lg-6 wow bounceInUp" data-wow-duration="1.4s">
+            <div class="box">
+              <h4 class="title"><a href="">Drum Pully</a></h4>
+              <p class="description"> </p>
+			   <img src="{% static 'fine/img/drum1.jpg'%}" alt="" height="150px"> 
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-6 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+            <div class="box">
+              <h4 class="title"><a href="">Mine Duty Drum Pully</a></h4>
+              <p class="description"></p>
+			   <img src="{% static 'fine/img/mine3.jpg'%}" alt="" height="150px"> 
+            </div>
+          </div>
+		  <div class="col-md-6 col-lg-6 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+            <div class="box">
+              <h4 class="title"><a href="">Idler Stand</a></h4>
+              <p class="description"></p>
+			   <img src="{% static 'fine/img/stand.jpg'%}" alt="" height="150px"> 
+            </div>
+          </div> -->
+          
+        </div>
+
+      </div>
+    </section><!-- #services -->
+
+   
+   
+   
+  
+
+    <!--==========================
+      Team Section
+    ============================-->
+    <section id="team" >
+      <div class="container">
+        <div class="section-header">
+          <h3>OWNERS</h3>
+          <p></p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6 wow fadeInUp">
+            <div class="member">
+              <img src="{% static 'fine/img/unknown.png'%}" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Dhirubhai Gadhiya</h4><br>
+                  
+                  <div class="social">
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-google-plus"></i></a>
+                    <a href=""><i class="fa fa-whatsapp"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="member">
+              <img src="{% static 'fine/img/unknown.png'%}" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Bharatbhai Chadasaniya</h4><br>
+                 
+                  <div class="social">
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-google-plus"></i></a>
+                    <a href=""><i class="fa fa-whatsapp"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="member">
+              <img src="{% static 'fine/img/unknown.png'%}" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Nilesh Sanghani</h4><br>
+                 
+                  <div class="social">
+                    <a href=""><i class="fa fa-phone"></i></a>
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-google-plus"></i></a>
+                    <a href=""><i class="fa fa-whatsapp"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+         
+        </div>
+
+      </div>
+    </section><!-- #team -->
+
+    <!--==========================
+      Clients Section
+    ============================-->
+    <!-- <section id="clients" class="wow fadeInUp">
+      <div class="container">
+
+        <header class="section-header">
+          <h3>Our Clients</h3>
+        </header>
+
+        <div class="owl-carousel clients-carousel">
+          <img src="img/clients/client-1.png" alt="">
+          <img src="img/clients/client-2.png" alt="">
+          <img src="img/clients/client-3.png" alt="">
+          <img src="img/clients/client-4.png" alt="">
+          <img src="img/clients/client-5.png" alt="">
+          <img src="img/clients/client-6.png" alt="">
+          <img src="img/clients/client-7.png" alt="">
+          <img src="img/clients/client-8.png" alt="">
+        </div>
+
+      </div>
+    </section>#clients -->
+
+    
+ <!--==========================
+      Call To Action Section
+    ============================-->
+    <section id="call-to-action" class="wow fadeInUp">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9 text-center text-lg-left">
+            <br><h3 class="cta-title">Call To Action</h3>
+            <p class="cta-text"></p>
+          </div>
+          <div class="col-lg-3 cta-btn-container text-center">
+            <a class="cta-btn align-middle" href="tel:+919712071723">Call To Action</a>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- #call-to-action -->
+
+
+
+  <!--==========================
+    Footer
+  ============================-->
+  <section id="footer">
+  <footer class="section-bg">
+    <div class="footer-top ">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-4">
+
+            <div class="row">
+               
+                <div class="col-sm-6">
+                  <div class="footer-links">
+                    <h4>Contact Us</h4>
+                    <p>8-A national highway,<br>
+                      Opposit Lalpar village,<br>
+                      Morbi-363642,<br>
+                      Gujarat,India.<br>
+                      <strong>Phone:</strong><a href="tel:9712071723"> +919712071723</a><br>
+                      <strong>Email:</strong><a href="mailto:fine.engineering21@gmail.com"> fine.engineering21@gmail.com</a><br>
+                    </p>
+                  </div>
+                </div>
+                 
+                
+            </div>
+            <div class="social-links mb-5">
+              <a href="https://twitter.com/JayGadhiya16" class="twitter mr-3"><i class="fa fa-twitter"></i></a>
+              <a href="https://www.facebook.com/jay.gadhiya.370" class="facebook mr-3"><i class="fa fa-facebook"></i></a>
+              <a href="https://www.instagram.com/mr.jay_gadhiya" class="instagram mr-3"><i class="fa fa-instagram"></i></a>
+              <a href="https://wa.me/9712071723" class="whatsapp mr-3"><i class="fa fa-whatsapp"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-8">
+
+           <div class="form">
+              
+              <h4>Send us a message</h4>
+              <p>Send a order via message</p>
+              <form  method="POST"  action="/" role="form" class="contactForm">{% csrf_token %}
+                <div class="form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:3" data-msg="Please enter at least 4 chars" />
+                  <!-- <div class="validation"></div> -->
+                </div>
+                <div class="form-group">
+                  <input type="phone" class="form-control" name="phone" id="email" placeholder="Your phone no" data-rule="minlen:10" data-msg="Please enter a Phone" />
+                  <!-- <div class="validation"></div> -->
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                  <!-- <div class="validation"></div> -->
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                  <!-- <div class="validation"></div> -->
+                </div>
+
+                <!-- <div id="sendmessage">Your message has been sent. Thank you!</div>
+                <div id="errormessage"></div> -->
+
+                <div class="text-center"><button type="submit" title="Send Message">Send Message</button></div>
+              </form>
+            </div>
+              
+         </div>
+
+          
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>FINE Engneering</strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!--
+          All the links in the footer should remain intact.
+          You can delete the links only if you purchased the pro version.
+          Licensing information: https://bootstrapmade.com/license/
+          Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Rapid
+        -->
+        Designed by <a href="https://bootstrapmade.com/">Jay Gadhiya</a>
+      </div>
+    </div>
+  </footer><!-- #footer -->
+</section>
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  <!-- Uncomment below i you want to use a preloader -->
+  <div id="preloader"></div>
+
+  <!-- JavaScript Libraries -->
+  <script src="{% static 'fine/lib/jquery/jquery.min.js'%}"></script>
+  <script src="{% static 'fine/lib/jquery/jquery-migrate.min.js'%}"></script>
+  <script src="{% static 'fine/lib/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+  <script src="{% static 'fine/lib/easing/easing.min.js'%}"></script>
+  <script src="{% static 'fine/lib/mobile-nav/mobile-nav.js'%}"></script>
+  <script src="{% static 'fine/lib/wow/wow.min.js'%}"></script>
+  <script src="{% static 'fine/lib/waypoints/waypoints.min.js'%}"></script>
+  <script src="{% static 'fine/lib/counterup/counterup.min.js'%}"></script>
+  <script src="{% static 'fine/lib/owlcarousel/owl.carousel.min.js'%}"></script>
+  <script src="{% static 'fine/lib/isotope/isotope.pkgd.min.js'%}"></script>
+  <script src="{% static 'fine/lib/lightbox/js/lightbox.min.js'%}"></script>
+  <!-- Contact Form JavaScript File -->
+  <!-- <script src="{% static 'fine/contactform/contactform.js'%}"></script> -->
+
+  <!-- Template Main Javascript File -->
+  <script src="{% static 'fine/js/main.js'%}"></script>
+
+</body>
+</html>
